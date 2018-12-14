@@ -1,0 +1,4 @@
+spring:
+  thymeleaf:
+    cache: false
+#    prefix: file:////C:/Users/dyoung/Desktop/project/quiz/src/main/resources/templates

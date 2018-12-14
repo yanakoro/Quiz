@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+<h1 > Please choose : <span  th:background="red" th:text="${session.answer.countryName}" /></h1>
+
+
+
+
+
+
+<p><a th:href="@{/result?chosenAnswer=}+ ${session.country1.countryName}" ><img  th:src="${session.country1.image_path}" th:width="500px" /> </a></p>
+<p><a th:href="@{/result?chosenAnswer=}+ ${session.country2.countryName}" ><img th:action="@{/result}" th:src="${session.country2.image_path}" th:width="500px" /> </a></p>
+
+
+
+
+
+
+
+<form action="#" th:action="@{/reset}"  method="post">
+    <p> <input type="submit" value="New Question" /></p>
+</form>
+</body>
+</html>
